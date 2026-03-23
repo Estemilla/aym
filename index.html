@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alquinta & Martin</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--negro:#0A0A0A;
+--cyan:#00BFFF;
+--blanco:#F5F5F5;
+--gris:#1E1E1E;
+--dorado:#C9A84C;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:var(--negro);color:var(--blanco);overflow-x:hidden}
+
+header{
+position:fixed;
+width:100%;
+padding:20px 50px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(10,10,10,0.6);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+header img{height:45px}
+nav a{margin-left:25px;color:var(--blanco);text-decoration:none;position:relative}
+nav a::after{content:"";position:absolute;width:0;height:2px;background:var(--cyan);left:0;bottom:-5px;transition:.3s}
+nav a:hover::after{width:100%}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+background:linear-gradient(rgba(10,10,10,.7),rgba(10,10,10,.9)), url('https://images.unsplash.com/photo-1560184897-67f4a3f9a7fa');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:3.5rem;
+max-width:800px;
+animation:fadeUp 1s ease;
+}
+.hero p{margin-top:20px;max-width:600px;opacity:.8;animation:fadeUp 1.5s ease}
+
+.btn{
+margin-top:30px;
+padding:14px 35px;
+border:none;
+background:linear-gradient(45deg,var(--cyan),var(--dorado));
+color:#000;
+font-weight:600;
+cursor:pointer;
+border-radius:30px;
+transition:.3s;
+}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 25px rgba(0,191,255,.3)}
+
+section{padding:100px 50px}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+padding:30px;
+border-radius:15px;
+background:rgba(30,30,30,0.6);
+backdrop-filter:blur(8px);
+border:1px solid rgba(255,255,255,0.05);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid var(--cyan);
+}
+
+.alt{background:var(--gris)}
+
+.gallery img{
+width:100%;
+border-radius:15px;
+transition:.4s;
+}
+.gallery img:hover{transform:scale(1.05)}
+
+footer{
+text-align:center;
+padding:30px;
+opacity:.6;
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;height:60px;
+border-radius:50%;
+display:flex;align-items:center;justify-content:center;
+font-size:28px;color:white;text-decoration:none;
+box-shadow:0 8px 25px rgba(0,0,0,.4);
+z-index:999;
+}
+
+@keyframes fadeUp{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<img src="imagotipo-alquintamartin.png">
+<nav>
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#proyectos">Proyectos</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Administración de Condominios con Visión Técnica y Preventiva</h1>
+<p>Optimizamos recursos, prevenimos fallas y elevamos el estándar de tu comunidad con gestión profesional.</p>
+<button class="btn">Solicitar Evaluación</button>
+</section>
+
+<section id="servicios">
+<h2>Servicios</h2>
+<div class="grid">
+<div class="card">
+<h3>Gestión Administrativa</h3>
+<p>Control financiero transparente y eficiente.</p>
+</div>
+<div class="card">
+<h3>Mantención Preventiva</h3>
+<p>Anticipamos problemas antes que ocurran.</p>
+</div>
+<div class="card">
+<h3>Supervisión Técnica</h3>
+<p>Experiencia real en maquinaria y sistemas.</p>
+</div>
+</div>
+</section>
+
+<section id="proyectos" class="alt">
+<h2>Condominios</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1507089947368-19c1da9775ae">
+<img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511">
+<img src="https://images.unsplash.com/photo-1494526585095-c41746248156">
+</div>
+</section>
+
+<section>
+<h2>Nuestra Diferencia</h2>
+<p>No solo administramos, entendemos el funcionamiento técnico de cada sistema dentro del condominio, permitiendo prevenir fallas, optimizar costos y entregar soluciones reales.</p>
+</section>
+
+<section id="contacto" class="alt">
+<h2>Contacto</h2>
+<p>Conversemos sobre cómo mejorar tu comunidad.</p>
+<button class="btn">Escríbenos</button>
+</section>
+
+<footer>
+© 2026 Alquinta & Martin
+</footer>
+
+<a href="https://wa.me/56981870952" target="_blank" class="whatsapp">💬</a>
+
+</body>
+</html>
